@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARAFUN -About</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional CSS for improved UI */
+    header {
+      padding: 20px;
+    }
+    #urlInput, #keyInput, #saveButton {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="tabs">
+      <div id="mainTab" class="tab active">Main Page</div>
+      <div id="AboutTab" class="tab">About</div>
+    </div>
+    <header>
+      <h1>ABOUT</h1>
+      <p>This website is made because of complete boredom and is meaning no harm to any educational matter...
+         yet its allowing kids to play games during class and communicate...
+          oh well any ways most of the things here are rushed and if you know who i am that made this website i am not the best at coding websites lmao 
+          i only am good at coding games in vr and such.
+           another out of topic thing here but i mainly use coding to put my (Real cheap thoughts) away and do whatever the f**k i want lol. 
+           oh yeah also to all the people telling me i wont get anywere doing coding and cybersecurity 🖕🖕 f**k you i did somthing :D.
+            but anyway i hope you enjoy this website i made good bye! </p>
+      
+    </header>
+    <main>
+    </main>
+    <footer>
+      <p>&copy; 2024 ARAFUN Unblocked Website. All rights reserved.</p>
+      <p>Interstellar plug by hotdog</p>
+      <p>Please Consider Sharing with your friends and do whatever lmao</p>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var mainTab = document.getElementById("mainTab");
+      var settingsTab = document.getElementById("AboutTab");
+      var tabs = [mainTab, settingsTab];
+      
+
+      
+
+      tabs.forEach(function(tab) {
+        tab.addEventListener("click", function() {
+          tabs.forEach(function(t) {
+            t.classList.remove("active");
+          });
+          // Implement tab functionality here (e.g., switch between pages)
+          if (tab === mainTab) {
+            window.location.href = "index.html";
+          } else if (tab === settingsTab) {
+            
+            window.location.href = "settings.html";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

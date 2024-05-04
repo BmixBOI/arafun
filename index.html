@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <style>
+        .tabs {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="tabs">
+        <a onclick="window.location.href = 'about.html';" href="#about">About</a> | <a " href="#settings">Settings</a>
+    </div>
+    <h1>Ara Fun</h1>
+    
+     <div class="additional-features">
+        <button onclick="loadRandomGame()">Play a Random Game</button>
+        <input type="text" id="search" placeholder="Search for a game...">
+        <button onclick="searchGames()">Search</button>
+        <select id="category">
+            <option value="">All Categories</option>
+            <option value="action">Action</option>
+            <option value="shooter">Shooter</option>
+            <option value="simulation">Simulation</option>
+            <option value="racing">Racing</option>
+            <option value="arcade">Arcade</option>
+            <option value="Apps">Apps</option>
+           
+        </select>
+        <div id="game-results">
+           
+        </div>
+    </div>
+    <div class="button-container">
+        
+        <div class="custom-button" data-category="action" onclick="window.location.href = 'PaperIO2.html';">
+            <div class="button-title">Paper IO 2</div>
+        </div>
+        <div class="custom-button" data-category="shooter" onclick="window.location.href = 'funnyshooter2.html';">
+            <div class="button-title">FunnyShooter2</div>
+        </div>
+        
+        <div class="custom-button" data-category="simulation" onclick="window.location.href = 'bitlife.html';">
+            <div class="button-title">BitLife</div>
+        </div>
+        <div class="custom-button" data-category="simulation" onclick="window.location.href = 'monkeymart.html';">
+            <div class="button-title">MonkeyMart</div>
+        </div>
+        <div class="custom-button" data-category="racing" onclick="window.location.href = 'DriveMad.html';">
+            <div class="button-title">DriveMad</div>
+        </div>
+        <div class="custom-button" data-category="racing" onclick="window.location.href = 'DriftHunters.html';">
+            <div class="button-title">DriftHunters</div>
+        </div>
+        
+        <div class="custom-button" data-category="arcade" onclick="window.location.href = 'circlegame.html';">
+            <div class="button-title">CircleGame</div>
+        </div>
+        <div class="custom-button" data-category="arcade" onclick="window.location.href = 'Swerve.html';">
+            <div class="button-title">Swerve</div>
+        </div>
+        <div class="custom-button" data-category="action" onclick="window.location.href = 'subwaysurfers.html';">
+            <div class="button-title">SubwaySurfers</div>
+        </div>
+        <div class="custom-button" data-category="simulation" onclick="window.location.href = 'slope.html';">
+            <div class="button-title">Slope</div>
+        </div>
+
+        <div class="custom-button" data-category="simulation" onclick="window.location.href = 'clusterrush.html';">
+            <div class="button-title">ClusterRush</div>
+        </div>
+        <div class="custom-button" data-category="simulation" onclick="window.location.href = 'minecraft.html';">
+            <div class="button-title">Minecraft</div>
+        </div>
+
+        <div class="custom-button" data-category="simulation" onclick="window.location.href = '2048.html';">
+            <div class="button-title">2048</div>
+        </div>
+        <div class="custom-button" data-category="action" onclick="window.location.href = 'basketballstars.html';">
+            <div class="button-title">basketballstars</div>
+        </div>
+         <div class="custom-button" data-category="action" onclick="window.location.href = 'retrobowl.html';">
+            <div class="button-title">RetroBowl</div>
+        </div>
+        <div class="custom-button" data-category="shooter" onclick="window.location.href = 'timeshooter.html';">
+            <div class="button-title">TimeShooter2</div>
+        </div>
+        <div class="custom-button" data-category="simulation" onclick="window.location.href = 'tunnelrush.html';">
+            <div class="button-title">TunnelRush</div>
+        </div>
+        <div class="custom-button" data-category="simulation" onclick="window.location.href = 'UnblockedBrowser.html';">
+            <div class="button-title">UnblockedBrowser</div>
+        </div>
+        
+    </div>
+
+   
+   
+
+    <script>
+        
+        function loadRandomGame() {
+            
+            var games = [
+                'PaperIO2.html',
+                'funnyshooter2.html',
+                'bitlife.html',
+                'monkeymart.html',
+                'drivemad.html',
+                'drifthunters.html',
+                'funnyshooterclassic.html',
+                'circlegame.html',
+                'Swerve.html',
+                'subwaysurfers.html',
+                'slope.html',
+                'clusterrush.html',
+                'minecraft.html',
+                '1v1lol.html',
+                '2048.html',
+                'basketballstars.html',
+                'retrobowl.html',
+                'timeshooter.html',
+                'tunnelrush.html',
+               
+            ];
+            var randomIndex = Math.floor(Math.random() * games.length);
+            window.location.href = games[randomIndex];
+        }
+
+        
+        function searchGames() {
+            var searchQuery = document.getElementById('search').value.toLowerCase();
+            var categoryFilter = document.getElementById('category').value.toLowerCase();
+            var gameButtons = document.querySelectorAll('.custom-button');
+
+            gameButtons.forEach(function(button) {
+                var gameTitle = button.querySelector('.button-title').innerText.toLowerCase();
+                var gameCategory = button.dataset.category.toLowerCase();
+
+                if ((categoryFilter === '' || gameCategory === categoryFilter) && gameTitle.includes(searchQuery)) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            });
+        }
+
+        
+        document.getElementById('search').addEventListener('input', searchGames);
+    </script>
+</body>
+</html>

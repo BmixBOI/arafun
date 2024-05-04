@@ -1,0 +1,81 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0e0e0e; /* Very dark gray */
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* White */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #fbc02d; /* Yellow */
+}
+
+.tabs {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ffffff; /* White */
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #ffffff; /* White */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.custom-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #512da8; /* Deep purple */
+    border: 1px solid #ffffff; /* White */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff; /* White */
+}
+
+.custom-button:hover {
+    background-color: #1565c0; /* Dark blue */
+}
+
+.button-title {
+    margin-top: 5px;
+    text-align: center;
+    color: #ffffff; /* White */
+}
+
+.additional-features {
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff; /* White */
+}
+
+.additional-features button,
+.additional-features select,
+.additional-features input[type="text"] {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ffffff; /* White */
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff; /* White */
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
